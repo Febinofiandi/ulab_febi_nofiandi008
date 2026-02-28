@@ -2,15 +2,11 @@
 $host = "localhost";
 $user = "root";
 $pass = "";
-$nama_db = "febi_ulab008";
+$db   = "db_ujianlab_febi_008";
 
-// Membuat koneksi
-$koneksi = mysqli_connect($host, $user, $pass, $nama_db);
+$conn = mysqli_connect($host, $user, $pass, $db);
 
-// Cek koneksi
-if (!$koneksi) {
-    die("Koneksi dengan database gagal: " . mysqli_connect_error());
-} else {
-    echo "Koneksi berhasil!";
+if (!$conn) {
+    die("Koneksi gagal: " . mysqli_connect_error());
 }
 ?>
